@@ -1,2 +1,2 @@
 object Sieve:
-   def primes(n: Int): Seq[Int] = (2 to n).filterNot(i => (2 until i).exists(j => i % j == 0))
+   def primes(n: Int): Seq[Int] = (2 to n).filter(i => (2 until i).forall(j => i % j != 0))
